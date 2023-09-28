@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>
+<body>
+    <form action="" onsubmit="return false;" style="margin: 50px 50px;">
+        <table>
+            <tr>
+                <td><button onclick="date()" id="i1">show date</button></td>
+                
+            </tr>
+            
+            <tr>
+                <td><label for="" id="output1"><p> </p>
+                </label></td>
+            </tr>
+            <tr>
+                <td><p> </p></td>
+            </tr>
+            <tr>
+                <td><button onclick="time()" id="i2">show Time</button></td>
+                
+            </tr>
+            <tr>
+                <td><label for="" id="output2"><p> </p>
+                </label></td>
+            </tr>
+        </table>
+
+        <script>
+            function date(){
+                const obj1 = new Date()
+                var day = obj1.getDate();
+                var month = obj1.toLocaleString('default', { month: 'long' });
+                var year = obj1.getFullYear();
+                var formattedDate = `${day}/${month}/${year}`;
+                document.getElementById("output1").innerHTML = formattedDate;
+
+            }
+            function time(){
+                const obj2 = new Date()
+                var d3 = obj2.toString()
+                document.getElementById("output2").innerHTML= d3;
+            }
+            console.log(obj2.toTimeString())
+        </script>
+
+    </form>
+</body>
+</html>

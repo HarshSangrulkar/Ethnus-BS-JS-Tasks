@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 14</title>
+    <style>
+        .container{
+            
+            margin: 50px;
+            padding: 20px;
+            background-color: rgb(186, 127, 137);
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+    <div class="container">
+        
+            <h1 style="color: blue;">Registration Form</h1>
+            <form onsubmit="return false;">
+                <table>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">Full Name:</td>
+                        <td><input style="width: 300px;" type="text" id="i1" name="name"></td>
+                        <td><p id="o1"></p></td>
+                    </tr>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">Last Name:</td>
+                        <td><input style="width: 300px;" type="text" id="i2" name="name"></td>
+                        <td><p id="o2"></p></td>
+                    </tr>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">Email:</td>
+                        <td><input style="width: 300px;" type="email" id="i3" name="email"></td>
+                        <td><p id="o3"></p></td>
+                    </tr>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">Password:</td>
+                        <td><input style="width: 300px;" type="password" id="i4" name="password"></td>
+                        <td><p id="o4"></p></td>
+                    </tr>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">Re-enter Password:</td>
+                        <td><input style="width: 300px;" type="password" id="i5" name="password"></td>
+                        <td><p id="o5"></p></td>
+                    </tr>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">Gender</td>
+                        <td>
+                            <table width="307px">
+                                <tr>
+                                    <td><input type="radio" name="test" />Male</td>
+    
+                                </tr>
+                                <tr>
+                                    <td><input type="radio" name="test" />FeMale</td>
+    
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">Age:</td>
+                        <td><input style="width: 300px;" type="number" id="i6" name="age"></td>
+                        <td><p id="o6"></p></td>
+                    </tr>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">Phone Number:</td>
+                        <td><input style="width: 300px;" type="tel" id="i7" name="number"></td>
+                        <td><p id="o7"></p></td>
+                    </tr>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">Address:</td>
+                        <td><textarea name="" id="i8" cols="38" rows="10"></textarea></td>
+                        <td><p id="o8"></p></td>
+                    </tr>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">State:</td>
+                        <td><input style="width: 300px;" type="text" id="i9" name="name"></td>
+                        <td><p id="o9"></p></td>
+                    </tr>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">Country:</td>
+                        <td><select name="" id="">
+                                <option>Choose your country</option>
+                                <option>India</option>
+                                <option>US</option>
+                                <option>UK</option>
+                                <option>Norway</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        
+                        <td style="font-weight: bold;">Languages known:</td>
+                        <td><input type="checkbox" id="name" name="name">
+                            <label for="">English</label>
+                            <input type="checkbox" id="name" name="name">
+                            <label for="">Kannada</label>
+                            <input type="checkbox" id="name" name="name">
+                            <label for="">Hindi</label>
+                            <input type="checkbox" id="name" name="name">
+                            <label for="">Telgu</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="checkbox" id="name" name="name">
+                            <label for="">Hereby I declare all given details are true.</label></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;" colspan="2">Login to <a href="https://ethnus.com/">Ethnus </a> website</td>
+                    </tr>
+                    
+                </table>
+                <input onclick="checker()" type="submit" style="border-radius: 5px; background-color: red; color: white;" value="Register">
+            </form>
+        </center>
+    </div>
+    <script>
+        function checker(){
+            
+            var var1 = document.getElementById("i1").value;
+            var var2 = document.getElementById("i2").value;
+            var var3 = document.getElementById("i3").value;
+            var var4 = document.getElementById("i4").value;
+            var var5 = document.getElementById("i5").value;
+            var var6 = document.getElementById("i6").value;
+            var var7 = document.getElementById("i7").value;
+            var var8 = document.getElementById("i8").value;
+            var var9 = document.getElementById("i9").value;
+
+            document.getElementById("o1").innerHTML = "";
+            document.getElementById("o2").innerHTML = "";
+            document.getElementById("o3").innerHTML = "";
+            document.getElementById("o4").innerHTML = "";
+            document.getElementById("o5").innerHTML = "";
+            document.getElementById("o6").innerHTML = "";
+            document.getElementById("o7").innerHTML = "";
+            document.getElementById("o8").innerHTML = "";
+            document.getElementById("o9").innerHTML = "";
+            
+            
+            if(var1 == ""){
+                document.getElementById("o1").innerHTML= `<p style="color: red; margin-left: 15px;">POOR<p>`;
+                
+
+            }if(var2 == ""){
+                document.getElementById("o2").innerHTML= `<p style="color: red; margin-left: 15px;">POOR<p>`;
+                
+
+            }
+            if(var3 == ""){
+                document.getElementById("o3").innerHTML= `<p style="color: red; margin-left: 15px;">POOR<p>`;
+                
+
+            }
+            if(var4 == ""){
+                document.getElementById("o4").innerHTML= `<p style="color: red; margin-left: 15px;">POOR<p>`;
+            }
+            if(var5 == ""){
+                document.getElementById("o5").innerHTML= `<p style="color: red; margin-left: 15px;">POOR<p>`;
+                
+
+            }if(var6 == ""){
+                document.getElementById("o6").innerHTML= `<p style="color: red; margin-left: 15px;">POOR<p>`;
+                
+
+            }
+            if(var7 == ""){
+                document.getElementById("o7").innerHTML= `<p style="color: red; margin-left: 15px;">POOR<p>`;
+                
+
+            }
+            if(var8 == ""){
+                document.getElementById("o8").innerHTML= `<p style="color: red; margin-left: 15px;">POOR<p>`;
+            }
+            if(var9 == ""){
+                document.getElementById("o9").innerHTML= `<p style="color: red; margin-left: 15px;">POOR<p>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

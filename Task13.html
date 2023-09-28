@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: beige;
+            border: 5px solid black;
+        }
+        #img1{
+            width: 350px;
+            height: 150px;
+            
+            margin: 50px;
+            margin-top: 100px;
+            position: relative;
+             animation-name: rightMovement;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            
+            animation-timing-function: linear;
+            
+
+            
+        }
+
+        @keyframes rightMovement {
+            from {
+                top: 0;
+                left: 20px;
+            }
+
+            to {
+                top: 0;
+                left: 700px;
+            }
+        }
+
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }        
+        button{
+            margin: 10px;
+        }
+        h2{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">
+            <img id="img1" src="images/train.png" alt="">
+            <div class="content">
+                <h2>Click the button to control the animation</h2>
+            </div>
+            <div class="content">
+                <button onclick="start()">Start</button>
+                <button onclick="stop()">Stop</button>
+            </div>
+            
+        </div>    
+    </div>
+    <script>
+        function start(){
+            var img1 = document.getElementById("img1");
+            img1.style.animationPlayState = "running";
+        }
+        function stop(){
+            var img1 = document.getElementById("img1");
+            img1.style.animationPlayState = "paused";
+        }
+    </script>
+    
+</body>
+</html>
